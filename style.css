@@ -1,0 +1,457 @@
+/* ================= GENERAL ================= */
+
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    background-color: black;
+    color: white;
+    overflow: auto;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* ================= MAIN LAYOUT ================= */
+
+.main {
+    display: flex;
+    height: 100vh;
+}
+
+
+/* ================= SIDEBAR ================= */
+
+.sidebar {
+    background-color: black;
+    width: 340px;
+    border-radius: 0;
+    margin: 0;
+}
+
+
+/* ================= MAIN CONTENT ================= */
+
+.main-content {
+    background-color: #121212;
+    flex: 1;
+    border-radius: 1rem;
+    overflow: auto;
+
+    padding: 0 1.5rem 80px 1.5rem;
+}
+
+
+/* ================= NAVIGATION ================= */
+
+.nav {
+    background-color: #121212;
+    border-radius: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 100px;
+    padding: 0.5rem 0.75rem;
+}
+
+.nav-item {
+    line-height: 2.5rem;
+    opacity: 0.7;
+    padding: 0.5rem 0.75rem;
+}
+
+.nav-item:hover {
+    opacity: 1;
+}
+
+.nav-item i {
+    font-size: 1.25rem;
+    margin-left: 1rem;
+}
+
+.nav-item a {
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+
+/* ================= LIBRARY ================= */
+
+.library {
+    background-color: #121212;
+    border-radius: 1rem;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100px;
+    padding: 0.5rem 0.75rem;
+    margin: 1.4rem;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lib-options img {
+    height: 1.25rem;
+    width: 1.25rem;
+}
+
+.icons {
+    font-size: 1.25rem;
+    display: flex;
+}
+
+.icons i {
+    margin-right: 1rem;
+    opacity: 0.7;
+}
+
+
+/* ================= SIDEBAR BOXES ================= */
+
+.box {
+    background-color: #232323;
+    border-radius: 0.75rem;
+
+    height: 140px;
+
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 0.75rem;
+
+    padding: 0.75rem 1rem;
+}
+
+.box-p1 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.box-p2 {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+
+/* ================= BUTTONS ================= */
+
+.badge {
+    background-color: #ffff;
+    color: black;
+
+    border: none;
+    border-radius: 100px;
+
+    padding: 0.25rem 1rem;
+
+    font-weight: 700;
+
+    margin-top: 0.5rem;
+
+    height: 2rem;
+    width: fit-content;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dark-badge {
+    background-color: #000;
+    color: white;
+}
+
+.badge:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    opacity: 1;
+}
+
+
+/* ================= TOP STICKY NAV ================= */
+
+.sticky-nav {
+    position: sticky;
+    top: 0;
+
+    background-color: #121212;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem;
+
+    z-index: 10;
+}
+
+.sticky-nav-items {
+    margin-left: 0.75rem;
+}
+
+.sticky-nav-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sticky-nav-options button {
+    margin-right: 1rem;
+}
+
+/* Center text inside Explore Premium / Install App buttons */
+
+.sticky-nav-options .badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 700px) {
+    .hide {
+        display: none;
+    }
+
+    .sidebar {
+        width: 80px;
+    }
+
+    .main-content {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+
+/* ================= CARDS ================= */
+
+.card {
+    background-color: #232323;
+
+    width: 150px;
+
+    border-radius: 0.5rem;
+
+    padding: 1rem;
+
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-img {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.card-title {
+    font-weight: 600;
+}
+
+.card-info {
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+    display: flex;
+
+    height: 300px;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.line {
+    width: 90%;
+    height: 50%;
+
+    border-top: 1px solid #ffffff;
+
+    opacity: 0.4;
+}
+/* ================= MUSIC PLAYER ================= */
+
+.music-player {
+    position: fixed !important;
+
+    left: 0 !important;
+    bottom: 0 !important;
+
+    width: 100vw !important;
+    height: 90px !important;
+
+    background-color: black !important;
+
+    z-index: 9999 !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* ================= SONG - LEFT ================= */
+
+.music-player .album {
+    position: absolute !important;
+
+    left: 20px !important;
+    top: 50% !important;
+
+    transform: translateY(-50%) !important;
+
+    width: 300px !important;
+
+    display: flex !important;
+    align-items: center !important;
+}
+
+.music-player .album-img {
+    width: 56px !important;
+    height: 56px !important;
+
+    object-fit: cover !important;
+
+    margin-right: 12px !important;
+}
+
+.music-player .song-name {
+    margin: 0 0 5px 0 !important;
+
+    font-size: 14px !important;
+    font-weight: 600 !important;
+
+    white-space: nowrap !important;
+}
+
+.music-player .artist-name {
+    margin: 0 !important;
+
+    font-size: 12px !important;
+
+    opacity: 0.7 !important;
+}
+
+
+/* ================= PLAYER - CENTER ================= */
+
+.music-player .player {
+    position: absolute !important;
+
+    left: 50% !important;
+    top: 50% !important;
+
+    transform: translate(-50%, -50%) !important;
+
+    width: 600px !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    align-items: center !important;
+}
+
+
+/* BUTTONS */
+
+.music-player .player-controls {
+    display: flex !important;
+
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.music-player .player-control-icon {
+    height: 16px !important;
+
+    margin: 0 12px !important;
+
+    cursor: pointer !important;
+
+    opacity: 0.8 !important;
+}
+
+.music-player .play-btn {
+    height: 32px !important;
+
+    opacity: 1 !important;
+}
+
+
+/* ================= PROGRESS ================= */
+
+.music-player .playback-bar {
+    width: 100% !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    gap: 8px !important;
+
+    margin-top: 5px !important;
+}
+
+.music-player .playback-bar span {
+    font-size: 12px !important;
+
+    min-width: 30px !important;
+
+    text-align: center !important;
+}
+
+.music-player .progress-bar {
+    width: 500px !important;
+
+    cursor: pointer !important;
+}
+
+
+/* ================= VOLUME - RIGHT ================= */
+
+.music-player .controls {
+    position: absolute !important;
+
+    right: 20px !important;
+    top: 50% !important;
+
+    transform: translateY(-50%) !important;
+
+    width: 180px !important;
+
+    display: flex !important;
+
+    justify-content: flex-end !important;
+    align-items: center !important;
+}
+
+.music-player .controls i {
+    font-size: 16px !important;
+}
+
+.music-player .volume-bar {
+    width: 100px !important;
+
+    margin-left: 10px !important;
+
+    cursor: pointer !important;
+}
