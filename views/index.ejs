@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Shivraj Music</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+        body {
+            font-family: "Montserrat", sans-serif;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #121212;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #3f3f3f;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+
+<body class="bg-black text-white overflow-hidden">
+
+<div class="h-screen flex flex-col">
+
+
+    <!-- ================= MAIN ================= -->
+
+    <div class="flex flex-1 min-h-0 gap-2 p-2">
+
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside
+            class="hidden md:flex w-64 flex-col bg-zinc-950 rounded-xl"
+        >
+
+            <!-- Navigation -->
+
+            <div class="p-5 space-y-4">
+
+                <a
+                    href="/"
+                    class="flex items-center gap-4 text-white font-semibold"
+                >
+                    <i class="fa fa-home text-xl"></i>
+
+                    <span>Home</span>
+                </a>
+
+
+                <a
+                    href="#search"
+                    class="flex items-center gap-4 text-zinc-400 hover:text-white transition"
+                >
+                    <i class="fa fa-search text-xl"></i>
+
+                    <span>Search</span>
+                </a>
+
+            </div>
+
+
+            <!-- Library -->
+
+            <div class="px-5 py-3">
+
+                <div class="flex items-center justify-between">
+
+                    <div
+                        class="flex items-center gap-3 text-zinc-400 hover:text-white cursor-pointer"
+                    >
+
+                        <i class="fa fa-book-open"></i>
+
+                        <span class="font-semibold">
+                            Your Library
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="text-zinc-400 hover:text-white text-xl"
+                    >
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Library Boxes -->
+
+            <div class="px-3 space-y-3 mt-2">
+
+                <div class="bg-zinc-900 rounded-xl p-4">
+
+                    <p class="font-semibold text-sm">
+                        Create your first playlist
+                    </p>
+
+                    <p class="text-xs text-zinc-400 mt-2">
+                        It's easy, we'll help you
+                    </p>
+
+                    <button
+                        class="mt-4 bg-white text-black rounded-full px-4 py-2 text-sm font-semibold hover:scale-105 transition"
+                    >
+                        Create Playlist
+                    </button>
+
+                </div>
+
+
+                <div class="bg-zinc-900 rounded-xl p-4">
+
+                    <p class="font-semibold text-sm">
+                        Let's find some music
+                    </p>
+
+                    <p class="text-xs text-zinc-400 mt-2">
+                        Discover new tracks
+                    </p>
+
+                    <a
+                        href="#search"
+                        class="inline-block mt-4 bg-white text-black rounded-full px-4 py-2 text-sm font-semibold hover:scale-105 transition"
+                    >
+                        Browse
+                    </a>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ================= MAIN CONTENT ================= -->
+
+        <main
+            class="flex-1 min-w-0 bg-gradient-to-b from-zinc-800 to-zinc-950 rounded-xl overflow-y-auto pb-28"
+        >
+
+
+            <!-- ================= TOP NAV ================= -->
+
+            <header
+                class="sticky top-0 z-20 flex items-center justify-between px-6 py-4 bg-zinc-900/90 backdrop-blur"
+            >
+
+                <div class="flex gap-3">
+
+                    <button
+                        onclick="history.back()"
+                        class="w-9 h-9 rounded-full bg-black/60 flex items-center justify-center"
+                    >
+                        <i class="fa fa-chevron-left"></i>
+                    </button>
+
+                    <button
+                        onclick="history.forward()"
+                        class="w-9 h-9 rounded-full bg-black/60 flex items-center justify-center"
+                    >
+                        <i class="fa fa-chevron-right"></i>
+                    </button>
+
+                </div>
+
+
+                <div class="flex items-center gap-3">
+
+                    <button
+                        class="hidden sm:block bg-white text-black rounded-full px-5 py-2 text-sm font-bold hover:scale-105 transition"
+                    >
+                        Explore Premium
+                    </button>
+
+                    <button
+                        class="hidden sm:block bg-black rounded-full px-5 py-2 text-sm font-semibold"
+                    >
+                        <i class="fa fa-download mr-2"></i>
+                        Install App
+                    </button>
+
+                    <div
+                        class="w-9 h-9 bg-zinc-700 rounded-full flex items-center justify-center"
+                    >
+                        <i class="fa fa-user"></i>
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- ================= SEARCH ================= -->
+
+            <section
+                id="search"
+                class="px-6 pt-6"
+            >
+
+                <form
+                    method="GET"
+                    action="/"
+                    class="max-w-2xl"
+                >
+
+                    <div
+                        class="flex items-center bg-zinc-900 border border-zinc-700 rounded-full px-5 py-3 focus-within:border-white transition"
+                    >
+
+                        <i
+                            class="fa fa-search text-zinc-400 mr-4"
+                        ></i>
+
+                        <input
+                            type="text"
+                            name="q"
+                            value="<%= query || '' %>"
+                            placeholder="What do you want to play?"
+                            autocomplete="off"
+                            class="flex-1 bg-transparent outline-none text-white placeholder-zinc-400"
+                        >
+
+                        <button
+                            type="submit"
+                            class="bg-white text-black rounded-full px-5 py-2 font-semibold text-sm hover:scale-105 transition"
+                        >
+                            Search
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+
+            <!-- ================= TITLE ================= -->
+
+            <section class="px-6 pt-8">
+
+                <% if (query) { %>
+
+                    <h1 class="text-2xl md:text-3xl font-bold">
+                        Search results for "<%= query %>"
+                    </h1>
+
+                <% } else { %>
+
+                    <h1 class="text-2xl md:text-3xl font-bold">
+                        Trending Music
+                    </h1>
+
+                <% } %>
+
+            </section>
+
+
+            <!-- ================= MUSIC CARDS ================= -->
+
+            <section class="px-6 py-6">
+
+                <% if (tracks.length === 0) { %>
+
+                    <div class="text-center py-20 text-zinc-400">
+
+                        <i class="fa fa-music text-5xl mb-5"></i>
+
+                        <p class="text-lg">
+                            No songs found
+                        </p>
+
+                    </div>
+
+                <% } %>
+
+
+                <div
+                    class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4"
+                >
+
+                    <% tracks.forEach(track => { %>
+
+                        <div
+                            class="track-card group bg-zinc-900/60 hover:bg-zinc-800 p-4 rounded-xl transition cursor-pointer"
+                            data-id="<%= track.id %>"
+                            data-title="<%= track.title %>"
+                            data-artist="<%= track.user?.name || 'Unknown Artist' %>"
+                            data-image="<%= track.artwork?.['480x480'] || 'https://via.placeholder.com/480' %>"
+                        >
+
+                            <div class="relative">
+
+                                <img
+                                    src="<%= track.artwork?.['480x480'] || 'https://via.placeholder.com/480' %>"
+                                    alt="<%= track.title %>"
+                                    class="w-full aspect-square object-cover rounded-lg shadow-lg"
+                                >
+
+                                <!-- Play button -->
+
+                                <button
+                                    class="play-track absolute right-3 bottom-3 w-12 h-12 rounded-full bg-green-500 text-black flex items-center justify-center opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition shadow-xl"
+                                >
+
+                                    <i class="fa fa-play"></i>
+
+                                </button>
+
+                            </div>
+
+
+                            <h3
+                                class="font-semibold mt-4 truncate"
+                            >
+                                <%= track.title %>
+                            </h3>
+
+
+                            <p
+                                class="text-sm text-zinc-400 truncate mt-1"
+                            >
+                                <%= track.user?.name || "Unknown Artist" %>
+                            </p>
+
+                        </div>
+
+                    <% }) %>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+    <!-- ================= MUSIC PLAYER ================= -->
+
+    <div
+        class="fixed bottom-0 left-0 right-0 h-24 bg-zinc-950 border-t border-zinc-800 flex items-center px-4 md:px-6 z-50"
+    >
+
+        <!-- LEFT -->
+
+        <div
+            class="flex items-center gap-3 w-1/4 min-w-0"
+        >
+
+            <img
+                id="playerImage"
+                src="https://via.placeholder.com/80"
+                class="w-14 h-14 rounded object-cover"
+            >
+
+            <div class="min-w-0">
+
+                <p
+                    id="playerTitle"
+                    class="font-semibold truncate text-sm"
+                >
+                    Select a song
+                </p>
+
+                <p
+                    id="playerArtist"
+                    class="text-xs text-zinc-400 truncate"
+                >
+                    —
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- CENTER -->
+
+        <div
+            class="flex-1 flex flex-col items-center max-w-2xl mx-auto"
+        >
+
+            <div class="flex items-center gap-6">
+
+                <button
+                    class="text-zinc-400 hover:text-white"
+                >
+                    <i class="fa fa-backward"></i>
+                </button>
+
+
+                <button
+                    id="playButton"
+                    class="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center hover:scale-105 transition"
+                >
+                    <i class="fa fa-play"></i>
+                </button>
+
+
+                <button
+                    class="text-zinc-400 hover:text-white"
+                >
+                    <i class="fa fa-forward"></i>
+                </button>
+
+            </div>
+
+
+            <div class="w-full flex items-center gap-3 mt-2">
+
+                <span
+                    id="currentTime"
+                    class="text-xs text-zinc-400"
+                >
+                    0:00
+                </span>
+
+                <input
+                    id="progress"
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="0"
+                    class="w-full accent-white cursor-pointer"
+                >
+
+                <span
+                    id="duration"
+                    class="text-xs text-zinc-400"
+                >
+                    0:00
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT -->
+
+        <div
+            class="hidden md:flex items-center gap-3 w-1/4 justify-end"
+        >
+
+            <i class="fa fa-volume-high text-zinc-400"></i>
+
+            <input
+                id="volume"
+                type="range"
+                min="0"
+                max="1"
+                step="0.01"
+                value="0.7"
+                class="w-24 accent-white"
+            >
+
+        </div>
+
+    </div>
+
+
+    <!-- Hidden audio -->
+
+    <audio id="audio"></audio>
+
+
+</div>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+const audio = document.getElementById("audio");
+
+const playButton = document.getElementById("playButton");
+
+const progress = document.getElementById("progress");
+
+const volume = document.getElementById("volume");
+
+const currentTime = document.getElementById("currentTime");
+
+const duration = document.getElementById("duration");
+
+const playerImage = document.getElementById("playerImage");
+
+const playerTitle = document.getElementById("playerTitle");
+
+const playerArtist = document.getElementById("playerArtist");
+
+
+let currentTrack = null;
+
+
+/* Format time */
+
+function formatTime(seconds) {
+
+    if (!seconds || isNaN(seconds)) {
+        return "0:00";
+    }
+
+    const minutes = Math.floor(seconds / 60);
+
+    const remaining = Math.floor(seconds % 60)
+        .toString()
+        .padStart(2, "0");
+
+    return `${minutes}:${remaining}`;
+}
+
+
+/* Play track */
+
+document.querySelectorAll(".play-track").forEach(button => {
+
+    button.addEventListener("click", (event) => {
+
+        event.stopPropagation();
+
+        const card = button.closest(".track-card");
+
+        const id = card.dataset.id;
+
+        const title = card.dataset.title;
+
+        const artist = card.dataset.artist;
+
+        const image = card.dataset.image;
+
+
+        currentTrack = id;
+
+
+        playerTitle.textContent = title;
+
+        playerArtist.textContent = artist;
+
+        playerImage.src = image;
+
+
+        audio.src =
+            `https://discoveryprovider.audius.co/v1/tracks/${id}/stream?app_name=my_music_app`;
+
+
+        audio.play();
+
+        playButton.innerHTML =
+            '<i class="fa fa-pause"></i>';
+
+    });
+
+});
+
+
+/* Main play / pause */
+
+playButton.addEventListener("click", () => {
+
+    if (!audio.src) {
+        return;
+    }
+
+    if (audio.paused) {
+
+        audio.play();
+
+        playButton.innerHTML =
+            '<i class="fa fa-pause"></i>';
+
+    } else {
+
+        audio.pause();
+
+        playButton.innerHTML =
+            '<i class="fa fa-play"></i>';
+
+    }
+
+});
+
+
+/* Progress */
+
+audio.addEventListener("timeupdate", () => {
+
+    if (!audio.duration) {
+        return;
+    }
+
+    progress.value =
+        (audio.currentTime / audio.duration) * 100;
+
+    currentTime.textContent =
+        formatTime(audio.currentTime);
+
+});
+
+
+audio.addEventListener("loadedmetadata", () => {
+
+    duration.textContent =
+        formatTime(audio.duration);
+
+});
+
+
+/* Seek */
+
+progress.addEventListener("input", () => {
+
+    if (!audio.duration) {
+        return;
+    }
+
+    audio.currentTime =
+        (progress.value / 100) * audio.duration;
+
+});
+
+
+/* Volume */
+
+volume.addEventListener("input", () => {
+
+    audio.volume = volume.value;
+
+});
+
+
+audio.volume = 0.7;
+
+
+/* Reset player when song ends */
+
+audio.addEventListener("ended", () => {
+
+    playButton.innerHTML =
+        '<i class="fa fa-play"></i>';
+
+    progress.value = 0;
+
+});
+
+</script>
+
+</body>
+
+</html>
